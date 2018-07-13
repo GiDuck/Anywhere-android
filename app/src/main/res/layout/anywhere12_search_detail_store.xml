@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@color/colorWhite"
+    tools:context="org.androidtown.anywhere.any_12_search_store.SearchDetailStore">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--캘린더-->
+
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/searchCalender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/main"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey"
+
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="원하는 지역을 검색"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <fragment
+                            android:id="@+id/storeAutoAddress"
+                            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/main"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey"
+
+               />
+
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:text="원하는 시간을 선택"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp">
+
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/minTime"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:gravity="center"
+                            android:hint="10"
+                            android:textSize="20sp"
+                            app:ms_hide_arrow="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="~"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/maxTime"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:gravity="center"
+                            android:hint="10"
+                            android:textSize="20sp"
+                            app:ms_hide_arrow="true" />
+                    </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/main"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/cpb_grey"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="30dp"
+
+                        android:text="인원수"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <!--인원수-->
+                        <ImageView
+                            android:id="@+id/peopleMinus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reservation_minus_click" />
+
+                        <EditText
+                            android:id="@+id/reservationPeopleNum"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="25sp" />
+
+                        <ImageView
+                            android:id="@+id/peoplePlus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reservation_plus_click" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/main"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey"
+
+                />
+
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="30dp"
+
+                        android:text="주제를 선택"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+
+                        android:columnCount="4"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioMeet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#미팅" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioDisplay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#전시회"
+
+                            />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#일반모임" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioStudy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#스터디" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioOpenMarket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#오픈마켓" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioParty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#파티" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioLecture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#강연" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioEx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#기타" />
+
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/main"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey"
+
+                />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+
+                    >
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/detail_search_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:text="검색하기"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="0dp"
+                        app:shadowEnabled="false"
+                        app:theme="@style/Base.TextAppearance.AppCompat.Button" />
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

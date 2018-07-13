@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="후기 작성하기"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서비스 별점"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <RatingBar
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/ratingCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="0.5"
+                    android:numStars="5"
+                    android:max="5"
+                    android:isIndicator="false"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/textAfterComment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/card_shadow"
+                android:gravity="top"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:hint="서비스는 잘 이용하셨나요? 다른 사람들을 위해 이용하신 후기를 남겨주세요!"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <info.hoang8f.widget.FButton
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/after_comment_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="후기 작성하기"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    app:cornerRadius="0dp"
+                    app:shadowEnabled="false"
+
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</ScrollView>
+</LinearLayout>

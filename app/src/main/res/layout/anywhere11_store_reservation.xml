@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_11_store_reservation.StoreReservation">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <!--스크롤뷰-->
+    <ScrollView
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar"
+        android:orientation="vertical">
+        <!--스크롤뷰 안에 있는 부모 레이아웃-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/scarlet"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/storeImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY" />
+                <!--가게 주소,업소명,사진 관련 레이아웃-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/storeImage"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/storeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="업소명"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/storeAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="가게주소"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey" />
+            <!--예약자 정보 이름 전화번호 관련 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약자 정보"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="이름:"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <!--예약자이름-->
+                    <EditText
+                        android:id="@+id/customerNick"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:imeOptions="flagNoExtractUi"
+
+                        android:maxLength="12"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="전화번호:"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <!--예약자 전화번호-->
+                    <EditText
+                        android:id="@+id/customerPhone"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:imeOptions="flagNoExtractUi"
+
+                        android:hint="-을 포함해서 적어주세요"
+                        android:textSize="15sp"
+
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey" />
+
+            <!--예약내용 레이아웃,일정,인원수,요청사항-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약 내용"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <!--예약 날짜 선택-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="예약 날짜 :"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/daySelector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="예약 날짜를 선택하세요" />
+
+
+                </LinearLayout>
+
+
+                <!--예약 시간 선택-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="예약 시간 :"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/timeSelector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="예약 시간을 선택하세요" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="인원수:"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                    <!--예약자 인원수-->
+
+                    <ImageView
+                        android:id="@+id/peopleMinus"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/reservation_minus_click" />
+
+                    <EditText
+                        android:id="@+id/reservation_PeopleNum"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="flagNoExtractUi"
+
+                        android:text="0"
+                        android:inputType="number"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/peoplePlus"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/reservation_plus_click" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="요청사항:"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                    <!--예약 요청사항-->
+                    <EditText
+                        android:id="@+id/reservationRequest"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/edit_shape"
+                        android:ems="10"
+                        android:imeOptions="flagNoExtractUi"
+
+                        android:gravity="top"
+                        android:hint="500자 이내로 적어주세요."
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:scrollHorizontally="false"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가게메뉴"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reservationMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fillViewport="true" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="총 선택 갯수:"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/reservationMenuNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="가격:"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/reservationMenuPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="결제하기"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:cornerRadius="0dp"
+                app:shadowEnabled="false" />
+        </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="#CFD8DC"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:backgroundTint="@color/scarlet"
+            android:layout_centerInParent="true"
+            />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/pw_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/black_de"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/sendPwAuth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:hint="가입시 등록한 이메일을 적어주세요."
+        android:paddingLeft="10dp"
+        android:textColor="@color/black_de"
+
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black_de"
+
+        android:text="가입시 등록한 이메일로 인증 번호가 발송됩니다."
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/sendPwAuthBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAnywhereBlue"
+        android:text="OK"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#CFD8DC"
+
+        android:id="@+id/findPwAuthFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/findPwAuthNumber"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorWhite"
+            android:hint="인증 번호 입력"
+            android:paddingLeft="10dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/findPwAuthBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorAnywhereBlue"
+            android:text="인증"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"/>
+    </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

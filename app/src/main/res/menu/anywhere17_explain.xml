@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menual"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/anywhere17_bottom_menual"
+        android:title="메뉴얼"
+        />
+
+    <item
+        android:id="@+id/help"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/anywhere17_bottom_help"
+        android:title="Q&amp;A"
+        />
+
+    <item
+        android:id="@+id/info"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/anywhere17_bottom_info"
+        android:title="유의사항"
+        />
+
+</menu>

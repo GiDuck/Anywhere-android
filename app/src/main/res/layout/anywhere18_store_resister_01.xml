@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_18_store_resister.StoreResisterFirst">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--가게 명,가게 주소,전화번호 입력-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가게명"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/storeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_shape"
+                    android:imeOptions="flagNoExtractUi"
+
+                    android:hint="가게명을 입력해 주세요." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="가게주소"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_margin="7dp"
+                        >
+                    <fragment
+                        android:id="@+id/storeAutoAddress"
+                        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/storeAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/edit_shape"
+                        android:imeOptions="flagNoExtractUi"
+
+                        android:hint="가게 주소를 입력해 주세요" />
+
+                    <info.hoang8f.widget.FButton
+                        android:id="@+id/storeSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="검색"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:cornerRadius="0dp"
+                        app:shadowEnabled="false" />
+                </LinearLayout>
+
+                <!--스크롤뷰와 구글맵을 같이 사용할 경우 모션이벤트를 구글맵에 포커스하기 위해서 감싸준다.-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp">
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <View
+                        android:id="@+id/scrollBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="전화번호"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/storePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_shape"
+                    android:imeOptions="flagNoExtractUi"
+
+                    android:hint=" - 을 포함해서 적어주세요."
+                    android:inputType="phone" />
+
+            </LinearLayout>
+
+
+            <!--운영시간 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="운영 시간"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="시작 : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/operationStartTime"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            app:ms_dropdown_height="250dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 종료 : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/operationEndTime"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            app:ms_dropdown_height="250dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--업소 대표이미지 지정하기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가게 대표 이미지 등록"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/storeMainImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit_shape" />
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/storeMainResister"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="사진 등록"
+
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="0dp"
+                    app:shadowEnabled="false" />
+            </LinearLayout>
+
+
+            <!--가게 뷰슬라이드 이미지 4장-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가게 슬라이드 이미지 등록"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <!--첫번째-->
+                    <ImageView
+                        android:id="@+id/storeIntroImage1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit_shape" />
+                    <!--두번째-->
+                    <ImageView
+                        android:id="@+id/storeIntroImage2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit_shape" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <!--세번째-->
+                    <ImageView
+                        android:id="@+id/storeIntroImage3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit_shape" />
+                    <!--네번째-->
+                    <ImageView
+                        android:id="@+id/storeIntroImage4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit_shape" />
+                </LinearLayout>
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/storeIntroResister"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="사진 등록"
+
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="0dp"
+                    app:shadowEnabled="false" />
+            </LinearLayout>
+
+            <Button
+                android:layout_margin="20dp"
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/colorAnywhereOrange"
+                android:text="next >"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

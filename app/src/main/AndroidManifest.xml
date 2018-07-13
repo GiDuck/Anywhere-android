@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.androidtown.anywhere">
+
+    <!-- 전화 걸기 퍼미션 -->
+    <uses-permission android:name="android.permission.DIAL_PHONE" />
+
+    <!-- 인터넷 허가 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- gps 사용하기 위한 퍼미션, FINE == gps, COARSE == network -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 사진가져 오기 위한 퍼미션 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 진동 퍼미션 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 카메라 사진 찍기 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--<uses-feature android:name="android.hardware.camera" />-->
+
+    <application
+        android:name=".header.CustomFontApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 구글맵을 사용하기위한 메타데이터 -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC8WglhXYUNHChDZtmBsxBQ-RINNORxF0M" />
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity android:name=".any_01_firstview.Firstview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+    </activity>
+        <activity android:name=".any_02_main.Main"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_03_login.Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".any_04_join.JoinNotifyRoles"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+
+        <activity
+            android:name=".any_04_join.JoinForm"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".any_07_customer_reservation.CustomerReservation"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_08_customer_reservation_detail.CustomerReservationDetail"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".any_09_favorite_store.FavoriteStore"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_10_store_detail.StoreDetail"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_11_store_reservation.StoreReservation"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_12_search_store.SearchDetailStore"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_13_search_result.SearchResult"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_14_noticeboard.NoticeBoard"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_14_noticeboard.NoticeBoardDetail"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_15_eventboard.EventBoard"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_15_eventboard.EventBoardDetail"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_16_0_qnaboard.QnaBoard"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_16_0_qnaboard.QnaBoardDetail"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_16_0_qnaboard.QnaBoardModify"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_16_0_qnaboard.QnaBoardWrite"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_17_supplier_main.SupplierMain"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".any_18_store_resister.StoreResisterFirst"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_18_store_resister.StoreResisterSecond"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_18_store_resister.StoreResisterThrid"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_19_store_defalut_modify.StoreDefalutModifyFirst"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_19_store_defalut_modify.StoreDefalutModifySecond"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_19_store_defalut_modify.StoreDefalutModifyThird"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_19_store_defalut_modify.StoreDefaultModifySelectStore"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_20_0_supplier_reservation_manager_storeList.ReservationManagerStoreList"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_20_1_supplier_reservation_manager.ReservationManager"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_20_2_supplier_reservation_manager_detail.ReservationManagerDetail"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_21_supplier_addplace1.AddPlaceFirst"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_22_supplier_addplace2.AddPlaceSecond"
+            android:configChanges="orientation|screenSize"
+
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".any_24_myStoreManager.MyStoreManager"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".any_23_1_supplier_appraiseManager.AppraiseManager"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".any_23_0_supplier_appraiseManager_storeList.AppraiseManagerStoreList"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".httpcontrol.AsyncSample" />
+        <activity android:name=".any_00_test.ImageUploadTest" />
+        <activity android:name=".any_00_test.test2" />
+        <activity android:name=".any_00_test.test3" />
+        <activity android:name=".any_00_test.test04" />
+
+        <service
+            android:name=".any_tools.CustomerReservationStateService"
+            android:enabled="true" />
+        <service
+            android:name=".any_tools.SupplierReservationStateService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".any_02_main.RequestAlliance"
+            android:label="@string/title_activity_request_alliance"
+            />
+        <activity android:name=".any_25_anyOther.ServiceInfo" />
+        <activity android:name=".any_25_anyOther.ServiceInfoDetail"></activity>
+    </application>
+
+</manifest>

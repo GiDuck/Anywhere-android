@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+
+    >
+
+    <!--android:background="@drawable/anywhere17_supplier_menu_background"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/addPlace"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/anywhere17_supplier_menu">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_shopping_cart_black_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="예약 등록"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/reservationManager"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/anywhere17_supplier_menu">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_content_paste_black_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="예약 관리"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/salesManager"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/anywhere17_supplier_menu">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_monetization_on_black_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="매출 관리"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/myStoreManager"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/anywhere17_supplier_menu">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_store_black_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="내 업소 관리"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

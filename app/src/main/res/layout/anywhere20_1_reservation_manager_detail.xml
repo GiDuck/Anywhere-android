@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_20_1_supplier_reservation_manager.ReservationManager">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <ScrollView
+        android:id="@+id/reservationScrollFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ReservationManager_calendarFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="예약 현황"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:visibility="gone"
+                    />
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/ReservationManager_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/colorAnywhereOrange" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="예약 대기"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/colorAnywhereBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="예약 완료"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/ReservationManager_calendarFrame"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/cpb_grey" />
+
+
+            <LinearLayout
+                android:id="@+id/subController"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/subController"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/cpb_grey" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/currentReservationdFrame"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/subController"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/tedbottompicker_selected"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/currentReservation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="현재 예약 :    "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/currentReservationNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="건"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/currentReservationdFrame"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey" />
+
+
+            <RelativeLayout
+                android:id="@+id/reservationManager_recyclerFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/reservation_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/colorAnywhereBlue"
+                    android:text="예약 내역 전체 보기"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/reservation_all"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cpb_grey" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reservationManager_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line4"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

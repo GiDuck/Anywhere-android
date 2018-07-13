@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_18_store_resister.StoreResisterSecond">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ScrollView
+        android:layout_below="@id/actionbar"
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공간 한줄 소개"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    />
+
+                <EditText
+                    android:id="@+id/storeIntroOneLine"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="내용을 입력해 주세요.(최대 200자)"
+                    android:imeOptions="flagNoExtractUi"
+
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_shape"
+                    android:maxLength="200"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공간 소개 작성"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    />
+
+                <EditText
+                    android:id="@+id/storeIntroText"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:lines="8"
+                    android:hint="내용을 입력해주세요.(최대 1000자)"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:minWidth="10.0dip"
+                    android:maxWidth="5.0dip"
+                    android:imeOptions="flagNoExtractUi"
+
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_shape"
+                    android:maxLength="1000"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약시 주의 사항"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    />
+                <EditText
+                    android:id="@+id/storeReservationText"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:hint="내용을 입력해주세요.(최대 1000자)"
+                    android:lines="8"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:imeOptions="flagNoExtractUi"
+
+                    android:minWidth="10.0dip"
+                    android:maxWidth="5.0dip"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_shape"
+                    android:maxLength="1000"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시설안내"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_shape"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                    <CheckBox
+                        android:id="@+id/checkBeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="빔프로젝트"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="음향기기"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkCon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="콘센트"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkPark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="주차장"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/checkBoard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="화이트보드"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkPrint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="복사/인쇄기"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkWifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="와이파이"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                    <CheckBox
+                        android:id="@+id/checkAir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="에어콘"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkFax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="팩스"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TV"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAnywhereOrange"
+                android:text="next >"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Anywhere</string>
+    <string name="alliance">공간등록을 하고 싶다면?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="path_search">
+       M141,17 A9,9 0 1,1 142,16 L149,23
+    </string>
+    <string name="title_activity_request_alliance">RequestAlliance</string>
+</resources>

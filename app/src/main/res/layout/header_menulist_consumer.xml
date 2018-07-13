@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <!--app:mrl_rippleOverlay="true" 설정을 하지 않으면 백그라운드를 사용할 수 없다.-->
+    <com.balysv.materialripple.MaterialRippleLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:mrl_rippleOverlay="true"
+    app:mrl_rippleDuration="100"
+    app:mrl_rippleDelayClick="false"
+    >
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:gravity="center"
+        android:text="로그인"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+
+        <TextView
+            android:id="@+id/myInfo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="내 정보 보기"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/reservation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="예약 내역"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/favorite"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="즐겨 찾기"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="공지사항"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/event"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="이벤트"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="도움말"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="Q&#38;A"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+    >
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:gravity="center"
+        android:text="서비스 정보"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_light"
+        />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDuration="100"
+        app:mrl_rippleDelayClick="false"
+        >
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="홈으로"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="메뉴"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/menuPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+
+                android:text="가격"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/menuRemove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="삭제"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+</LinearLayout>

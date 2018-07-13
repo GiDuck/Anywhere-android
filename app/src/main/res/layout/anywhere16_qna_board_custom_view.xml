@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:padding="8dp"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp">
+
+
+                <TextView
+                    android:id="@+id/qnaBoard_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QnA제목임"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+
+                <TextView
+                    android:id="@+id/qnaBoard_writer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QnA 작성자"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="|"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/qnaBoard_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="2017.6.22 10:30"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/qnaBoard_readState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="체크"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@+id/main"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/black_de"
+
+            ></View>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+    </RelativeLayout>
+</LinearLayout>

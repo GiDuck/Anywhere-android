@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/favoriteStoreImage"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/favoriteStoreName"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/favoriteStoreImage"
+            android:layout_below="@id/favoriteStoreImage"
+            android:layout_marginTop="8.5dp"
+            android:text="가게 이름"
+            android:textAlignment="center"
+            android:textSize="15sp"
+
+            />
+
+      <!--  <com.like.LikeButton
+            android:id="@+id/likeButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:icon_size="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/favoriteStoreImage"
+            android:layout_alignTop="@+id/favoriteStoreImage"
+            app:icon_type="Star"
+            app:liked="true"
+
+            ></com.like.LikeButton>-->
+
+        <!-- <ImageView
+             android:id="@+id/favoriteIsTrue"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_alignLeft="@id/favoriteStoreImage"
+             android:layout_alignTop="@+id/favoriteStoreImage"
+             android:src="@drawable/ic_favorite_black_24dp"/>-->
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/scroll_menubar"
+            android:layout_alignParentLeft="true"
+            android:background="#000000"
+            />
+
+        <!--메뉴바-->
+        <ScrollView
+            android:background="#ffffff"
+            android:id="@+id/scroll_menubar"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--로그인 화면-->
+                <org.androidtown.anywhere.header.HeaderLogin
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    >
+
+                </org.androidtown.anywhere.header.HeaderLogin>
+
+                <!--메뉴바안의 메뉴-->
+                <FrameLayout
+                    android:id="@+id/menuListSelect"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <org.androidtown.anywhere.header.HeaderMenuListConsumer
+                        android:id="@+id/cunsumerMenuList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </org.androidtown.anywhere.header.HeaderMenuListConsumer>
+
+                    <org.androidtown.anywhere.header.HeaderMenuListSupplier
+                        android:id="@+id/supplierMenuList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        >
+
+                    </org.androidtown.anywhere.header.HeaderMenuListSupplier>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>

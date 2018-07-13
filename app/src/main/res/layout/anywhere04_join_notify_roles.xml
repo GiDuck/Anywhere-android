@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="org.androidtown.anywhere.any_04_join.JoinNotifyRoles">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/notifyText"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:background="@null"
+                android:backgroundTint="@color/colorAnywhereBlue"
+                android:scrollbars="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/notifyText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cpb_grey"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/linerCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/notifyText"
+                android:layout_below="@+id/notifyText"
+                android:layout_marginTop="20dp">
+
+                <CheckBox
+                    android:id="@+id/notifyCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    app:buttonTint="@color/colorAnywhereBlue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나는 상기 사항을 확인하였습니다"
+                    android:textColor="@color/black_de"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/notifyCheckedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/linerCheck"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/colorAnywhereBlue"
+                android:text="다음 단계로"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

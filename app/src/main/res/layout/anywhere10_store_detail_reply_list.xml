@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/replyMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_subdirectory_arrow_right_black_24dp"/>
+
+
+        <TextView
+            android:id="@+id/replyNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="이름"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/replyStar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:isIndicator="true"
+            android:max="5"
+
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/replyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="날짜"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/replyContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:text="댓글입니다." />
+
+
+    <LinearLayout
+        android:id="@+id/replyController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/appendReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginRight="20dp"
+            android:text="댓글 달기"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/deleteReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="삭제하기"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cpb_grey" />
+
+
+</LinearLayout>

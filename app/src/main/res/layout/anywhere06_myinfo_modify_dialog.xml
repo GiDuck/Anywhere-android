@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1.4"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="닉네임:"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="전화번호:"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="비밀번호:"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="비밀번호 확인:"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        >
+
+            <!--닉네임-->
+            <EditText
+                android:id="@+id/nick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                />
+            <!--닉네임 중복체크-->
+            <Button
+                android:id="@+id/nickCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAnywhereBlue"
+                android:text="중복확인"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            />
+        <!--비밀번호-->
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:inputType="textPassword"
+            />
+        <!--비밀번호 확인-->
+        <EditText
+            android:id="@+id/passCheck"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:inputType="textPassword"
+            />
+    </LinearLayout>
+
+</LinearLayout>

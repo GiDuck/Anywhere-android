@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_17_supplier_main.SupplierMain">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="1.5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp">
+
+                <android.support.design.widget.BottomNavigationView
+                    android:id="@+id/bottomNavi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="8dp"
+                    app:menu="@menu/anywhere17_explain" />
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

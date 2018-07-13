@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/reservationMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="아메리카노"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/reservationMenuNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="0"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/reservationMenuPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="0000원"
+        android:textSize="15dp" />
+</LinearLayout>

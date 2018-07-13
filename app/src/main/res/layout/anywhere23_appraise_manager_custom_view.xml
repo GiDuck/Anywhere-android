@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/anywhere17_supplier_menu_background"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/appraiseManager_reply_marker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_subdirectory_arrow_right_black_24dp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/appraiseManager_userNick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="김기덕"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+
+                        <RatingBar
+                            android:id="@+id/appraiseManager_userRatingBar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:isIndicator="true"
+                            android:max="5"
+                            android:numStars="5"
+                            android:layout_marginLeft="30dp"
+                            android:stepSize="0.5"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/appraiseManager_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right"
+                            android:text="2017-06-05"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/cpb_grey"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/appraiseManager_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="내용입니다"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/appendReplySupplier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="댓글 달기"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/anywhere23_text_select"/>
+
+                    <TextView
+                        android:id="@+id/deleteReplySupplier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="삭제하기"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/anywhere23_text_select"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+</LinearLayout>

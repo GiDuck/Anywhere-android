@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_16_0_qnaboard.QnaBoardDetail"
+   >
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+
+                            <TextView
+                                android:id="@+id/qnaBoardDetail_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:text="제목이요"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="20dp"
+
+                            >
+
+
+
+                            <TextView
+                                android:id="@+id/qnaBoardDetail_writer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:text="글쓴이"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/qnaBoardDetail_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2017-07-05"
+                                android:textSize="15sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!--타이틀 카드뷰-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:id="@+id/qnaBoardDetail_content"
+                        android:padding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@+id/main"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/cpb_grey"
+
+                        />
+
+                    <!--밑 부분은 게시글 수정, 삭제 버튼-->
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <info.hoang8f.widget.FButton
+                            android:id="@+id/qnaBoard_modifyBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:text="수정하기"
+
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            app:buttonColor="@color/colorAnywhereBlue"
+                            app:cornerRadius="0dp"
+
+                            app:shadowEnabled="false" />
+
+                        <info.hoang8f.widget.FButton
+                            android:id="@+id/qnaBoard_deleteBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:text="삭제하기"
+                            android:textColor="@color/colorWhite"
+
+                            android:textStyle="bold"
+                            app:buttonColor="@color/colorAnywhereBlue"
+                            app:cornerRadius="0dp"
+                            app:shadowEnabled="false" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_below="@+id/main"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/cpb_grey"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:text="comment"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/QnaBoard_reply_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp"
+                                        android:layout_margin="15dp"
+                                        android:background="@color/card_shadow"
+                                        android:textSize="15sp"
+                                        android:gravity="top"
+                                        android:padding="10dp" />
+
+                                    <info.hoang8f.widget.FButton
+                                        android:id="@+id/QnaBoard_reply_write"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginRight="10dp"
+                                        android:text="댓글 달기"
+                                        android:textColor="@color/colorWhite"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="0dp"
+                                        app:shadowEnabled="false" />
+
+                                </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_below="@+id/main"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/cpb_grey"
+                                />
+
+                            <android.support.v7.widget.RecyclerView
+
+                                android:id="@+id/QnaBoard_reply_recycler"
+                                android:padding="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="30dp"
+                                android:layout_marginTop="20dp">
+
+                            </android.support.v7.widget.RecyclerView>
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

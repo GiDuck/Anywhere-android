@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_25_anyOther.ServiceInfo">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="서비스 정보"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/main"
+                android:layout_margin="20dp"
+                android:background="@color/cpb_grey"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:padding="20dp"
+                    android:text="회사명 : 애니웨어\n대표이사 : 애니웨어 팀 | 사업자 등록번호 :\n통신판매업신고 :\n메일:\n고객센터:"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/main"
+                android:layout_margin="20dp"
+                android:background="@color/cpb_grey"
+
+                />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/serviceInfoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="서비스 약관 보기"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="0dp"
+                app:shadowEnabled="false" />
+
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/personalInfoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="개인정보 처리 방침 보기"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="0dp"
+                app:shadowEnabled="false" />
+
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/locationInfoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="위치 서비스 사용 약관 보기"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="0dp"
+                app:shadowEnabled="false" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

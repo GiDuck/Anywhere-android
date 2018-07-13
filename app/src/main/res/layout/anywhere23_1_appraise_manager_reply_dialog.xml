@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/replyContent"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:lines="8"
+        android:hint="댓글을 입력해 주세요."
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:minWidth="10.0dip"
+        android:maxWidth="5.0dip"
+        android:layout_margin="20dp"
+        android:background="@color/colorWhite"
+        android:maxLength="1000"
+        />
+
+</LinearLayout>

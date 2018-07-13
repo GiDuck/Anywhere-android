@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.anywhere.any_22_supplier_addplace2.AddPlaceSecond">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/addPlace2_Calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+
+
+            <LinearLayout
+                android:id="@+id/addPlace2_LinearFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addPlace2_Calendar"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorAnywhereOrange" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="예약 대기"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/colorAnywhereBlue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="예약 완료"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:background="@color/cpb_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/singlePick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:text="1개씩 선택"
+                                android:textSize="15dp" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rangePick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="범위선택"
+                                android:textSize="15dp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:background="@color/cpb_grey" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="예약 시간 설정"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="시작 : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/addPlace2_startHour"
+                            android:layout_width="80dp"
+                            android:backgroundTint="@null"
+                            android:layout_height="wrap_content"
+                            app:ms_dropdown_height="250dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 종료 : "
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/addPlace2_EndHour"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@null"
+                            app:ms_dropdown_height="250dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:background="@color/cpb_grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모임 설정"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkMeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#미팅" />
+
+                        <CheckBox
+                            android:id="@+id/checkShow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#전시회" />
+
+                        <CheckBox
+                            android:id="@+id/checkCommon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#일반모임" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkStudy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#스터디" />
+
+                        <CheckBox
+                            android:id="@+id/checkOpen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#오픈마켓" />
+
+                        <CheckBox
+                            android:id="@+id/checkElse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#기타" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkParty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#파티" />
+
+                        <CheckBox
+                            android:id="@+id/checkSpeach"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="#강연" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/addPlace2_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="등록하기 "
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    app:shadowEnabled="false"
+                    app:cornerRadius="0dp"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

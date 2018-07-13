@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <FrameLayout
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <!--검색 레이아웃-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+            </android.support.v7.widget.CardView>
+
+            <!--뷰슬라이드 Indicator-->
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/slideIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                app:ci_drawable="@color/cpb_grey">
+
+            </me.relex.circleindicator.CircleIndicator>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardElevation="4dp">
+
+                <org.androidtown.anywhere.any_02_main.ViewPaper.AutoScrollViewPager
+                    android:id="@+id/mainSlideViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                </org.androidtown.anywhere.any_02_main.ViewPaper.AutoScrollViewPager>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--제휴 버튼-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                  >
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/allianceButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/alliancebutton"
+                        android:padding="10dp"
+                        app:mrl_rippleOverlay="true">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:text="@string/alliance"
+                                    android:textColor="#ffffff"
+                                    android:textSize="30dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:text="제휴하러가기"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardElevation="4dp"> <!--기획전 리사이클러뷰 사용-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/storeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp" />
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/serviceInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

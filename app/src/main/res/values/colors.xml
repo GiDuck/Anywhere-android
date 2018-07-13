@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="anywhere_main_color1">#79daff</color>
+    <color name="anywhere_main_color2">#c8f0ff</color>
+    <color name="anywhere_main_color3">#8ddfff</color>
+    <color name="colorAnywhereBlue">#00acef</color>
+    <color name="colorTest">#79daff</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="deepCyan">#002C3B</color>
+    <color name="scarlet">#F2635F</color>
+    <color name="colorAnywhereOrange">#F05F40</color>
+
+</resources>
